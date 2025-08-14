@@ -16,15 +16,21 @@ def unemployment_data():
 
     df = pd.DataFrame(data, columns=['State', 'Year', 'Unemployment_Rate'])
 
-    # Statistics
-    print(f"Mean Unemployment Rate: {df['Unemployment_Rate'].mean():.2f}")
-    print(f"Median Unemployment Rate: {df['Unemployment_Rate'].median():.2f}")
-    print(f"Max Unemployment Rate: {df['Unemployment_Rate'].max():.2f}")
-    print(f"Min Unemployment Rate: {df['Unemployment_Rate'].min():.2f}")
-    print(f"Mode Unemployment Rate: {df['Unemployment_Rate'].mode()[0]:.2f}")
-    print(f"Standard Deviation: {df['Unemployment_Rate'].std():.2f}")
-    print(f"Variance: {df['Unemployment_Rate'].var():.2f}")
-    print(f"Correlation with Year: {df['Unemployment_Rate'].corr(df['Year']):.2f}")
+      # Stats Dictionary
+    stats_summary = {
+        "Mean": df['Unemployment_Rate'].mean(),
+        "Median": df['Unemployment_Rate'].median(),
+        "Mode": df['Unemployment_Rate'].mode()[0],
+        "Max": df['Unemployment_Rate'].max(),
+        "Min": df['Unemployment_Rate'].min(),
+        "Standard Deviation": df['Unemployment_Rate'].std(),
+        "Variance": df['Unemployment_Rate'].var(),
+        "Correlation with Year": df['Unemployment_Rate'].corr(df['Year'])
+    }
+
+    # CSV file
+    pd.DataFrame([stats_summary]).to_csv("stats_summary.csv", index=False)
+    print("stats_summary.csv generated successfully.")
 
     df.to_csv('unemployment_data.csv', index=False)
     print("unemployment_data.csv generated successfully.")
@@ -57,3 +63,4 @@ def unemployment_data():
 
 if __name__ == '__main__':
     unemployment_data()
+
