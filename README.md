@@ -1,8 +1,28 @@
-# Unemployment-data-analysis
-This repository contains practical examples and projects for performing Data Analysis using Python.
-Data generated randomly and convert it into pandas DataFrame
-Exploratory Data Analysis (EDA) using Pandas, NumPy, and Seaborn
-Save the generated file in CSV format
-Data Visualization (line, bar, scatter, heatmap, and advanced charts)
-Descriptive Statistics (mean, median, mode, standard deviation, correlation)
-📌 Tech Stack: Python, Pandas, NumPy, Matplotlib, Seaborn
+# 📊 Unemployment Analysis Project
+
+This Python project analyzes unemployment rates by state and year using **Pandas**, **Matplotlib**, and **Seaborn**.  
+It generates random unemployment data for multiple Indian states between 2020 and 2024, performs statistical analysis, and visualizes the results using various plots.
+
+---
+
+## 🚀 Features
+- Generates random unemployment data for selected states and years
+- Calculates key statistics:
+  - Mean
+  - Median
+  - Mode
+  - Min & Max
+  - Standard Deviation
+  - Variance
+  - Correlation with Year
+- Saves data to a CSV file
+- Creates visualizations:
+  - Bar Plot
+  - Heatmap
+  - Scatter Plot
+  - Line Plot
+
+---
+
+## 📂 Project Structure
+
